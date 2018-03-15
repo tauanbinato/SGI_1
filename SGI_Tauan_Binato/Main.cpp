@@ -1,51 +1,12 @@
+#include "Header.h"
 
-#include <iostream>
-#include<stdio.h>
-using namespace std;
-
-/* Creating a Point2D Class*/
-class Point2D
-{
-public:
-	float x, y;
-	Point2D(float _x, float _y) { x = _x; y = _y; }
-};
-
-
-/* Creating Rectangle Class */
-class Rectangle_Class
-{
-	//Default private variables.
-	float width, height;
-	float pos_x, pos_y;
-
-	
-public:
-	//Constructor
-	Rectangle_Class(float x, float y, float w, float h);
-	//Cpy Constructor
-	Rectangle_Class(const Rectangle_Class &rect) { cout << "Copy Constructor called" <<endl; }
-	//Assignment Operator
-	Rectangle_Class& operator = (const Rectangle_Class &rect) { cout << "Assignment Operator called" << endl; return *this; }
-
-	//Setters
-	void setRectangleSize(float, float);
-	void setRectanglePos(float, float);
-
-	//Auxiliar Collision Functions
-	bool isPointInside(Point2D);
-	bool isRectInside(Rectangle_Class);
-};
-
-
-/*Constructor implementations*/
+/*Constructor implementation*/
 Rectangle_Class::Rectangle_Class(float x, float y , float w , float h)
 {
 	cout << "Constructor called" << endl;
 	setRectangleSize(w, h);
 	setRectanglePos(x, y);
 }
-
 
 /*Methods implementations*/
 void Rectangle_Class::setRectangleSize(float w, float h)
@@ -101,6 +62,7 @@ int main()
 	rect2 = rect1;
 	Rectangle_Class rect3 = rect1;
 	*/
+
 
 	/*Testing point collision and rectangle collision*/
 	Rectangle_Class rect(1, 1, 5, 5);
