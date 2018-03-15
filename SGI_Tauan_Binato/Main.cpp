@@ -89,25 +89,27 @@ bool Rectangle_Class::isRectInside(Rectangle_Class rect)
 	cout << "Rectangle collision NOT detected" << endl;
 	return false;
 }
-
+/* End Methods implementations*/
 
 
 int main()
 {
-	/*
+	/* Uncommend this to test diferent types of constructor.
+
 	Rectangle_Class rect1(0,0,10,10);
 	Rectangle_Class rect2(1, 1, 5, 5);
 	rect2 = rect1;
 	Rectangle_Class rect3 = rect1;
 	*/
 
+	/*Testing point collision and rectangle collision*/
 	Rectangle_Class rect(1, 1, 5, 5);
 	Point2D point(5, 3);
 	rect.isPointInside(point);
 	Rectangle_Class rect2(4, 5, 5, 5);
 	rect.isRectInside(rect2);
 
-	getchar();
+	getchar(); // Used to hold console.
 	
 
 	return 0;
