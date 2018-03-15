@@ -55,7 +55,7 @@ bool Rectangle_Class::isRectInside(Rectangle_Class rect)
 
 int main()
 {
-	/* Uncommend this to test diferent types of constructor.
+	/* Uncomment this to test diferent types of constructor.
 
 	Rectangle_Class rect1(0,0,10,10);
 	Rectangle_Class rect2(1, 1, 5, 5);
