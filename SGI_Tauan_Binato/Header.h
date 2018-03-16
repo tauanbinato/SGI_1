@@ -1,3 +1,22 @@
+/************************************************************;
+* Project           : SGI_2
+*
+* Program name : SGI_2_Tauan_Binato
+*
+* Author : Tauan Binato Flores
+*
+* Date created : 2018/03/16
+*
+* Purpose : Study how diferent types of constructor works in c++ and work in a simple AAB collision rectangle.
+*
+* Revision History :
+*
+* Date          Author
+* 2018/03/14    tauanbf	
+* 2018/03/14	tauanbf
+* 2018/03/14	tauanbf
+| ***********************************************************/
+
 #pragma once
 
 #include <iostream>
