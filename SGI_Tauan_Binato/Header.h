@@ -7,7 +7,7 @@
 *
 * Date created : 2018/03/16
 *
-* Purpose : Study how diferent types of constructor works in c++ and work in a simple AAB collision rectangle.
+* Purpose : Study how diferent types of constructor works in c++ and work in a simple AABB collision rectangle.
 *
 * Revision History :
 *
