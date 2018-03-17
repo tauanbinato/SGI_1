@@ -80,11 +80,10 @@ int main()
 	Rectangle_Class rect2(4, 5, 5, 5);
 	rect.isRectInside(rect2);
 
-	auto myRectangle = unique_ptr<Rectangle_Class>(new Rectangle_Class(1,1,2,2));
-	auto myRectangle2 = shared_ptr<Rectangle_Class>(new Rectangle_Class(1, 1, 2, 2));
+	//Just playing arround with smart pointers
+	//auto myRectangle = unique_ptr<Rectangle_Class>(new Rectangle_Class(1,1,2,2));
+	//auto myRectangle2 = shared_ptr<Rectangle_Class>(new Rectangle_Class(1, 1, 2, 2));
 	
-
-	cout << myRectangle2.use_count() << endl;
 
 	getchar(); // Used to hold console.
 	
