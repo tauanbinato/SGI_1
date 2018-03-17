@@ -1,11 +1,22 @@
 #include "Header.h"
 
 /*Constructor implementation*/
+
+Rectangle_Class::Rectangle_Class()
+{
+	cout << "Default constructor called" << endl;
+}
+
 Rectangle_Class::Rectangle_Class(float x, float y , float w , float h)
 {
 	cout << "Constructor called" << endl;
 	setRectangleSize(w, h);
 	setRectanglePos(x, y);
+}
+
+Rectangle_Class::~Rectangle_Class()
+{
+	cout << "Rectangle Destroyed." << endl;
 }
 
 /*Methods implementations*/
@@ -56,13 +67,11 @@ bool Rectangle_Class::isRectInside(Rectangle_Class rect)
 int main()
 {
 	/* Uncomment this to test diferent types of constructor.
-
 	Rectangle_Class rect1(0,0,10,10);
-	Rectangle_Class rect2(1, 1, 5, 5);
-	rect2 = rect1;
-	Rectangle_Class rect3 = rect1;
+	Rectangle_Class rect5(1, 1, 5, 5);
+	rect5 = rect1;
+	Rectangle_Class rect3 (rect1);
 	*/
-
 
 	/*Testing point collision and rectangle collision*/
 	Rectangle_Class rect(1, 1, 5, 5);
@@ -70,6 +79,12 @@ int main()
 	rect.isPointInside(point);
 	Rectangle_Class rect2(4, 5, 5, 5);
 	rect.isRectInside(rect2);
+
+	auto myRectangle = unique_ptr<Rectangle_Class>(new Rectangle_Class(1,1,2,2));
+	auto myRectangle2 = shared_ptr<Rectangle_Class>(new Rectangle_Class(1, 1, 2, 2));
+	
+
+	cout << myRectangle2.use_count() << endl;
 
 	getchar(); // Used to hold console.
 	

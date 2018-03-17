@@ -21,6 +21,8 @@
 
 #include <iostream>
 #include<stdio.h>
+#include<memory>
+
 using namespace std;
 
 /* Creating a Point2D Class*/
@@ -41,12 +43,16 @@ class Rectangle_Class
 
 
 public:
+	//default constructor
+	Rectangle_Class();
 	//Constructor
 	Rectangle_Class(float x, float y, float w, float h);
 	//Cpy Constructor
 	Rectangle_Class(const Rectangle_Class &rect) { cout << "Copy Constructor called" << endl; }
 	//Assignment Operator
 	Rectangle_Class& operator = (const Rectangle_Class &rect) { cout << "Assignment Operator called" << endl; return *this; }
+	//Destructor
+	~Rectangle_Class();
 
 	//Setters
 	void setRectangleSize(float, float);
